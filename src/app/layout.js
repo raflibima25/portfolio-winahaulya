@@ -1,4 +1,11 @@
+import { Outfit } from 'next/font/google';
 import "./globals.css";
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
+});
 
 export const metadata = {
   title: "Winah Aulya Indriana | Portfolio",
@@ -14,8 +21,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id" suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
+    <html lang="id" suppressHydrationWarning className={outfit.variable}>
+      <body suppressHydrationWarning className={outfit.className}>{children}</body>
     </html>
   );
 }

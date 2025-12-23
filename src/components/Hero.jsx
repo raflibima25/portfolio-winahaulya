@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const Hero = () => {
     return (
         <section id="home" className="relative min-h-screen flex items-center py-[120px] pb-20 overflow-hidden">
@@ -37,8 +39,15 @@ const Hero = () => {
                 {/* Image */}
                 <div className="relative flex justify-center items-center animate-slide-right order-1 lg:order-2">
                     <div className="relative w-[280px] h-[280px] lg:w-[350px] lg:h-[350px] rounded-full gradient-primary p-2 shadow-pink-lg">
-                        <div className="w-full h-full rounded-full bg-white flex items-center justify-center text-[#F6B1CE] overflow-hidden">
-                            <img src="assets/image/IMG_20240709_101849_732_2.jpg" alt="Winah Aulya Indriana" className="w-full h-full rounded-full object-cover" />
+                        <div className="w-full h-full rounded-full bg-white flex items-center justify-center text-[#F6B1CE] overflow-hidden relative">
+                            <Image
+                                src="/assets/image/IMG_20240709_101849_732_2.jpg"
+                                alt="Winah Aulya Indriana"
+                                fill
+                                sizes="(max-width: 1024px) 280px, 350px"
+                                className="rounded-full object-cover"
+                                priority
+                            />
                         </div>
                     </div>
 
