@@ -47,6 +47,8 @@ const Hero = () => {
                                 sizes="(max-width: 1024px) 280px, 350px"
                                 className="rounded-full object-cover"
                                 priority
+                                fetchPriority="high"
+                                quality={85}
                             />
                         </div>
                     </div>

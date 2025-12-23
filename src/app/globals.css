@@ -34,6 +34,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    text-rendering: optimizeSpeed;
   }
 
   a {
@@ -268,22 +269,38 @@
 /* Animation Classes */
 .animate-float {
   animation: float 6s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-pulse-blob {
   animation: pulse-blob 8s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease forwards;
+  will-change: transform, opacity;
 }
 
 .animate-slide-left {
   animation: slide-in-left 0.8s ease forwards;
+  will-change: transform, opacity;
 }
 
 .animate-slide-right {
   animation: slide-in-right 0.8s ease forwards;
+  will-change: transform, opacity;
+}
+
+/* Optimize animations after load */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Custom Scrollbar */
