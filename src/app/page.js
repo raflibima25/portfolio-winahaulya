@@ -1,11 +1,14 @@
+import dynamic from 'next/dynamic';
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Education from "@/components/Education";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+
+// Dynamic imports for below-the-fold components to reduce initial bundle
+const About = dynamic(() => import("@/components/About"));
+const Education = dynamic(() => import("@/components/Education"));
+const Experience = dynamic(() => import("@/components/Experience"));
+const Skills = dynamic(() => import("@/components/Skills"));
+const Contact = dynamic(() => import("@/components/Contact"));
+const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
   return (

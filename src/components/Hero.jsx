@@ -41,7 +41,7 @@ const Hero = () => {
                     <div className="relative w-[280px] h-[280px] lg:w-[350px] lg:h-[350px] rounded-full gradient-primary p-2 shadow-pink-lg">
                         <div className="w-full h-full rounded-full bg-white flex items-center justify-center text-[#F6B1CE] overflow-hidden relative">
                             <Image
-                                src="/assets/image/IMG_20240709_101849_732_2.jpg"
+                                src="/assets/image/IMG_20240709_101849_732_2.webp"
                                 alt="Winah Aulya Indriana"
                                 fill
                                 sizes="(max-width: 1024px) 280px, 350px"
